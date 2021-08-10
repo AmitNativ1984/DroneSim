@@ -1,0 +1,29 @@
+<launch>
+    
+    <remap from="/d415/color/image_raw" to="airsim_node/Seeker/d415/Scene"/>
+    <remap from="/d415/color/camera_info" to="airsim_node/Seeker/d415/Scene/camera_info"/>
+    <remap from="/d415/color/image_raw/compressed" to="airsim_node/Seeker/d415/Scene/compressed"/>
+    <remap from="/d415/color/image_raw/compressed/parameter_descriptions" to="airsim_node/Seeker/d415/Scene/compressed/parameter_descriptions"/>
+    <remap from="/d415/color/image_raw/compressed/parameter_updates" to="airsim_node/Seeker/d415/Scene/compressed/parameter_updates"/>
+    <remap from="/d415/color/image_raw/compressedDepth" to="/airsim_node/Seeker/d415/Scene/compressedDepth"/>
+    <remap from="/d415/color/image_raw/compressedDepth/parameter_descriptions" to="/airsim_node/Seeker/d415/Scene/compressedDepth/parameter_descriptions"/>
+    <remap from="/d415/color/image_raw/compressedDepth/parameter_updates" to="/airsim_node/Seeker/d415/Scene/compressedDepth/parameter_updates"/>
+    <remap from="/d415/color/image_raw/theora" to="/airsim_node/Seeker/d415/Scene/theora"/>
+    <remap from="/d415/color/image_raw/theora/parameter_descriptions" to="/airsim_node/Seeker/d415/Scene/theora/parameter_descriptions"/>
+    <remap from="/d415/color/image_raw/theora/parameter_updates" to="/airsim_node/Seeker/d415/Scene/theora/parameter_updates"/>
+
+    <remap from="/d415/aligned_depth_to_color/image_raw" to="/airsim_node/Seeker/depth/DepthPerspective" />
+    <remap from="/d415/aligned_depth_to_color/camera_info" to="/airsim_node/Seeker/depth/DepthPerspective/camera_info" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/compressed" to="/airsim_node/Seeker/depth/DepthPerspective/compressed" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/compressed/parameter_descriptions" to="/airsim_node/Seeker/depth/DepthPerspective/compressed/parameter_descriptions" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/compressed/parameter_updates" to="/airsim_node/Seeker/depth/DepthPerspective/compressed/parameter_updates" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/compressedDepth" to="/airsim_node/Seeker/depth/DepthPerspective/compressedDepth" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/compressedDepth/parameter_descriptions" to="/airsim_node/Seeker/depth/DepthPerspective/compressedDepth/parameter_descriptions" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/compressedDepth/parameter_updates" to="/airsim_node/Seeker/depth/DepthPerspective/compressedDepth/parameter_updates" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/theora" to="/airsim_node/Seeker/depth/DepthPerspective/theora" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/theora/parameter_descriptions" to="/airsim_node/Seeker/depth/DepthPerspective/theora/parameter_descriptions" />
+    <remap from="/d415/aligned_depth_to_color/image_raw/theora/parameter_updates" to="/airsim_node/Seeker/depth/DepthPerspective/theora/parameter_updates" />
+    
+    <remap from="/map" to="/airsim_node/origin_geo_point"/>
+
+</launch>

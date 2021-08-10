@@ -1,0 +1,14 @@
+<launch>
+    
+     <!-- start simulation server -->
+    <include file="/home/seeker/AirSim/ros/src/airsim_ros_pkgs/launch/airsim_node.launch">
+        <arg name="host" value="$(env SIM_HOST)"/>
+    </include>
+
+    <!-- converting simulation depth image to point cloud -->
+    <include file="/home/seeker/Dev/sim/depth2pcl.launch" />
+
+    <!-- adding remaps from simulation to seeker original topics -->
+    <include file="/home/seeker/Dev/sim/sim_remap_topics.launch" />
+
+</launch>

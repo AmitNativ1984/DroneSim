@@ -1,0 +1,16 @@
+<launch>
+    <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" />
+    <node pkg="nodelet" type="nodelet" name="depth_image_proc_convert_metric" args="load depth_image_proc/convert_metric nodelet_manager" output="screen">
+        <remap from="image_raw" to="/airsim_node/Seeker/depth/DepthPerspective"/>
+        <remap from="image" to="/airsim_node/Seeker/depth/DepthPerspective/image_rect"/>
+    </node>
+
+    <node pkg="nodelet" type="nodelet" name="depth_image_proc_point_cloud_xyz" args="load depth_image_proc/point_cloud_xyz_radial nodelet_manager" output="screen">
+        <remap from="camera_info" to="/airsim_node/Seeker/depth/DepthPerspective/camera_info"/>
+        <remap from="image_raw" to="/airsim_node/Seeker/depth/DepthPerspective/image_rect" />
+        <remap from="points" to="/airsim_node/Seeker/depth/points"/>
+        <param name="queue_size" type="int"   value="1"/>
+    </node>
+</launch>
+
+
